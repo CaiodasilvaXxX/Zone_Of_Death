@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class FighterAnimationDemoFREE : MonoBehaviour {
-	
-	public Animator animator;
+    private static readonly int WalkBackwardHash = Animator.StringToHash("Walk Backward");
+    public Animator animator;
 
 	private Transform defaultCamTransform;
 	private Vector3 resetPos;
@@ -46,8 +46,8 @@ public class FighterAnimationDemoFREE : MonoBehaviour {
 		}
 		else
 		{
-			animator.SetBool("Walk Backward", false);
-		}
+            animator.SetBool(id: WalkBackwardHash, false);
+        }
 
 		if (GUI.Button (new Rect (25, 90, 100, 30), "Punch")) 
 		{
