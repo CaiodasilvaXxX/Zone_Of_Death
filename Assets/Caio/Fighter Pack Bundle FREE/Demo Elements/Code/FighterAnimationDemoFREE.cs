@@ -46,7 +46,7 @@ public class FighterAnimationDemoFREE : MonoBehaviour {
 		}
 		else
 		{
-            animator.SetBool(id: WalkBackwardHash, false);
+            animator.SetBool("Walk Backward", false);
         }
 
 		if (GUI.Button (new Rect (25, 90, 100, 30), "Punch")) 
