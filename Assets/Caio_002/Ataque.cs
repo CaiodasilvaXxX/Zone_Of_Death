@@ -12,7 +12,14 @@ public class Ataque : MonoBehaviour
         Collider[] acertos = Physics.OverlapSphere(
             maoDireita.position, socoDireitaAlcance, playerMask);
 
-
+        foreach (Collider c in acertos)
+        {
+            if (c.transform != this.transform)
+            {
+                c.transform.GetComponent<Hp>().TomarDano(10f);
+            }
+        }
 
     }
 }
+
